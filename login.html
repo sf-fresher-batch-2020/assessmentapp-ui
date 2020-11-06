@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment App</title>
+    <!-- CSS -->
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <script src="login.js"> </script>
+</head>
+<body>
+    <header id="header">
+        <!-- Load Header content-->
+    </header>
+    <!-- <main class="container-fluid"> -->
+        <!-- <div id="page-content"> -->
+            <!-- <div id="message"></div> -->
+            <!-- <h1> Login </h1> -->
+            <div class="login-body">
+            <form onsubmit="login()" autocomplete="off" class="form">
+                <h1> Login </h1> <br/><br/>
+                <input class="form-input" type="email" name="mail" id="mail" placeholder="Email" required
+                    autofocus></br></br>
+                <input class="form-input" type="password" name="pass" id="pass" placeholder="Password" required>
+                </br></br>
+                <input class="form-button" type="submit" value="Login">
+                <h4>New user? <a href="register.html">Register</a> </h4>
+            </form>
+        </div>
+    <!-- </main> -->
+    <script>
+       
+        
+        
+        function login() {
+            event.preventDefault();
+            // Step 1: Get Form Values
+            let email = document.querySelector("#mail").value;
+            let password = document.querySelector("#pass").value;
+            //Step 2: Store all form values in a single object, so that it will easy to send 
+            let obj = { "email": email, "password": password };
+            console.log(obj);
+            var loginserviceobj = new LoginService();
+            loginserviceobj.login(email, password);
+            var user = loginserviceobj.login(email, password);
+            if (user) {
+                alert("Successfully Loggedin");
+            }
+            else {
+                alert("Invalid Login Credentials");
+            
+            }
+        }
+    </script>
+</body>
+</html>
