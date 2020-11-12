@@ -1,5 +1,6 @@
-var jsonData = [
+var jsonData =[
   {
+    
     "q" : "html means?",
     "opt1": "Hyper text markup langage",
     "opt2" : "hyper type marrpup language",
@@ -7,6 +8,7 @@ var jsonData = [
     "answer" : "Hyper text markup language"
   },
   {
+    
     "q" : "css means",
     "opt1": "cascading style sheet",
     "opt2" : "cascade style sheet",
@@ -14,6 +16,7 @@ var jsonData = [
     "answer" : "cascading style sheet"
   },
   {
+    
     "q" : "which is header tag",
     "opt1": "head tag",
     "opt2" : "body tag",
@@ -21,6 +24,7 @@ var jsonData = [
     "answer" : "head tag"
   },
   {
+    
     "q" : "which is breakline tag",
     "opt1": "break tag",
     "opt2" : "body tag",
@@ -28,6 +32,7 @@ var jsonData = [
     "answer" : "break tag"
   },
   {
+    
     "q" : "which is span tag",
     "opt1": "span",
     "opt2" : "style",
@@ -35,6 +40,7 @@ var jsonData = [
     "answer" : "span tag"
   },
   {
+    
     "q" : "which is section tag",
     "opt1": "div tag",
     "opt2" : "style tag",
@@ -42,6 +48,7 @@ var jsonData = [
     "answer" : "div tag"
   },
   {
+    
     "q" : "which is style tag",
     "opt1": "style tag",
     "opt2" : "select tag",
@@ -49,6 +56,7 @@ var jsonData = [
     "answer" : "style tag"
   },
   {
+    
     "q" : "which is selection tag",
     "opt1": "select tag",
     "opt2" : "head tag",
@@ -56,6 +64,7 @@ var jsonData = [
     "answer" : "select tag"
   },
   {
+    "id":"9",
     "q" : "which is paragraph tag",
     "opt1": "header tag",
     "opt2" : "paragraph tag",
@@ -63,11 +72,16 @@ var jsonData = [
     "answer" : "paragragh tag"
   },
   {
+    
     "q" : "which is heading tag",
     "opt1": "head tag",
     "opt2" : "paragragh tag",
     "opt3" : "none of these",
     "answer" : "head tag"
   },
-  
+
 ];
+  
+localStorage.setItem("question",JSON.stringify(jsonData)); 
+var retrivedobject = localStorage.getItem('question');
+console.log('retrivedobject: ', JSON.parse(retrievedobject));     
