@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Assessment App</a>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" data-loggedin=false>Home</a>
+            </li>
+           
+            
+            
+            
+        </ul>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+                <a class="nav-link" href="login.html" data-loggedin=false>Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html" data-loggedin=false>Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="" data-loggedin=true style="display: block;">Welcome </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="" onclick="logout()" data-loggedin=true>(Logout) </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+<script>
+
+
+function logout(){
+    localStorage.clear();
+    window.location.href = "login.html";
+}
+
+</script>
+</ul>
+</div>
+</nav>
+</div>
