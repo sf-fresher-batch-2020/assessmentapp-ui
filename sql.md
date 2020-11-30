@@ -1,6 +1,6 @@
 create database assessment_db;
 use assessment_db;
- /* ..login .. */ 
+/*..login .. */ 
 create table user(
 id int primary key auto_increment,
 name varchar(50) not null,
