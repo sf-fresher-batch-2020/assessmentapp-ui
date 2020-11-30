@@ -69,18 +69,18 @@
                 break;
             }
         }
-     var userObj={ "user":user, "name":Name, "email":email, "password":password, "dob" :DOB, "address":address, "mobile_no": phno, "gender":gender };
-     console.log(userObj);
+     var detail={ "user":user, "name":Name, "email":email, "password":password, "dob" :DOB, "address":address, "mobile_no": phno, "gender":gender };
+     console.log(detail);
       var registerserviceObj= new RegisterService();
-      let result= registerserviceObj.register(userObj);
-      if (result=="success"){
-       alert("registered successfully");
-       window.location.href="login.html"; 
-      }
-      else{
-          alert("registration failed");
-      }
-       }
+      let result= registerserviceObj.register(detail);
+      //if (result=="success"){
+       //alert("registered successfully");
+        
+      //}
+      //else{
+          //alert("registration failed");
+     // }
+    }
 </script>
 </body>
 </html>
