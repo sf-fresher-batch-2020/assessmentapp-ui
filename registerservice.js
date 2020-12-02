@@ -7,6 +7,7 @@ class RegisterService {
             location.reload();
             console.log(detail);
             alert("continue login");
+            window.location.href="login.html";
             let result = "success";
             
             return result;
@@ -15,3 +16,4 @@ class RegisterService {
         }
     }
 }
+
